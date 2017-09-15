@@ -1,13 +1,14 @@
 var mongoose = require('mongoose');
 var StartupSchema = new mongoose.Schema({
-	_id: mongoose.Schema.Types.ObjectId,
 	companyName: String,
 	fundingStage: String,
 	engaged: Boolean,
 	typeOfTech: String,
 	summary: String,
 	website: String,
-	potentialApplications: { type: Array },
+	potentialApplications: [{ 
+		value: String 
+	}],
 	securityLevel: Number,
 	comments: [{
 		title: String,
