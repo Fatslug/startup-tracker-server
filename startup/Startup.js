@@ -13,12 +13,12 @@ var StartupSchema = new mongoose.Schema({
 	comments: [{
 		title: String,
 		body: String,
-		author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+		author: { type: Object },
 		timestamp: String
 	}],
 	createdTimestamp: Date,
 	modifiedTimestamp: Date,
-	author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
+	author: { type: Object }
 });
 mongoose.model('Startup', StartupSchema);
 
