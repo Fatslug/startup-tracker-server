@@ -9,7 +9,7 @@ var StartupSchema = new mongoose.Schema({
 	potentialApplications: [{ 
 		value: String 
 	}],
-	securityLevel: Number,
+	securityLevel: String,
 	comments: [{
 		title: String,
 		body: String,
